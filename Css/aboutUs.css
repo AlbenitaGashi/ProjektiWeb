@@ -1,0 +1,42 @@
+*{
+    margin:0;
+    font-family:sans-serif;
+}
+
+.about-us{
+    display: flex;
+    flex-direction: column;
+    background-image: url("../Images/Background/backAbout.jpg");
+    height: 500px;
+    background-size: cover;
+    color:aliceblue;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.misioni {
+    display: flex;
+    color:#6495ED;
+    font-size: 20px;
+    padding-left: 5%;
+    text-align: center;
+    align-items: center;
+}
+.misioni img{
+    max-width: 55%;
+}
+.misioni h1 {
+text-align: center;
+color:#6495ED;
+}
+
+.pse-ne {
+    display: flex;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(51, 51, 51);
+    align-items: center;
+}
+.pse-ne h1 {   
+    color: rgb(248, 170, 2);
+}
