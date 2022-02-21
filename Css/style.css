@@ -44,6 +44,15 @@ a{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.relativeSearchAside{
+    position: relative;
+    width: 85%;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    margin: 10px;
+    transform: translate(-50%, -50%);
+}
 #searchIcon{
     position: absolute;
     right: 1%;
@@ -65,6 +74,91 @@ a{
 .icon img:active{
     filter: brightness(70%);
 }
+
+.burgerIcon{
+    position: absolute;
+    left: 10px;
+    top: 15%;
+    display: none;
+}
+.burgerIcon img{
+    width: 40px;
+}
+.burgerIcon img:active{
+    filter: brightness(70%);
+}
+.asideBurger{
+    display: none;
+    width: 40%;
+    height: 100%;
+    z-index:1000;
+    background: rgba(0, 53, 107, 0.9);
+/*  background-color: #ffffff10;
+    backdrop-filter: blur(12px); */
+    /* -webkit-backdrop-filter: blur(12px); */
+    position: fixed;
+    animation: asideBurger 1s ease-in-out;
+}
+.asideBurgerChildren h1{
+    text-align: center;
+    color: #d3d5e6;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#xIcon{
+    width: 25px;
+    padding:10px;
+}
+.burgerAsideCategory li{
+    text-align: center;
+    color: #5a9ae2;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.burgerAsideCategory hr{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+@keyframes asideBurger {
+
+    0% {
+        width: 0;
+        height: 100%;
+    }
+
+    100% {
+        width: 40%;
+    }
+
+}
+.asideCover{
+    display: none;
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff10;
+    z-index:1000;
+    backdrop-filter: blur(12px);
+    /* box-shadow: 0px 0px 1px 5000px rgb(0 0 0 / 70%); */
+}
+
+.asideCoverRemove{
+    animation: asideBurgerRemove 1s ease-in-out;
+}
+
+@keyframes asideBurgerRemove {
+
+    0% {
+        width: 40%;
+    }
+    100% {   
+        width: 0;
+        height: 100%;
+    }
+
+}
 .aside{
     display: flex;
     flex-direction: column;
@@ -76,7 +170,7 @@ a{
 }
 .aside button{
     border: none;
-    width: 245px;
+    width: 90%;
     height: 60px;
     border-radius: 50px;
     background-color: #447db6;
@@ -99,7 +193,7 @@ a{
     border-radius: 35px;
     display: flex;
     justify-content: center;
-    padding-bottom: 50px;
+    padding-bottom: 15px;
     color: rgb(1 1 44);
 }
 
@@ -207,8 +301,16 @@ a{
     width: 250px;
     height: 250px;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px;
+    box-shadow: 5px 5px 5px black;
     flex-direction: column;
+}
+.discount{
+    position: absolute;
+    left: 7%;
+    top: 2%;
+    padding:5px;
+    background-color: rgb(231, 136, 136);
+    color:white;
 }
 #heartIconStyle{
     width: 40px;
@@ -236,20 +338,26 @@ a{
 #arrowGoBack:active{
     filter: brightness(70%);
 }
+
+#wrapper {
+    background: #67707a;
+    min-height: 100vh;
+}
 .singleProd{
     display: flex;
     padding: 2%;
-    margin: 10px;
-    border-radius: 20px;
     color: rgb(49, 46, 46);
+    margin-left: 12%;
+    min-height: 100vh;
+    margin-right: 12%;
+    background: #adbac8;
 }
 .singleProd div{
-    padding-left: 40px;
-    padding-top: 40px;
+    margin-left: 40px;
+    margin-top: 40px;
 }
 .singleProd img{
-    width: 500px;
-    height: 500px;
+    width: 100%;
     border-radius: 20px;
     box-shadow: 5px 5px 5px;
 }
@@ -328,4 +436,83 @@ a{
 }
 #discount{
     flex-direction: column;
+}
+@media (max-width: 768px) {
+    .aside {
+        display: none;
+    }
+    .slider-background{
+        width: 100%;
+    }
+    .burgerIcon{
+        display: block;
+    }
+    .nav-div{
+        display: none;
+    }
+    .product{
+        width: 22%;
+    }
+    .product img{
+        width: 100%;
+        height: auto;
+    }
+    .product h3,h2{
+        font-size: 11pt;
+    }
+}
+@media (max-width: 425px) {
+    .asideBurger{
+        width: 100%;
+    }
+    .relativeSearch{
+        display: none;
+    }
+    @keyframes asideBurger {
+
+        0% {
+            width: 0;
+            height: 100%;
+        }
+    
+        100% {
+            width: 100%;
+        }
+    
+    }
+    
+@keyframes asideBurgerRemove {
+
+    0% {
+        width: 100%;
+    }
+    100% {   
+        width: 0;
+        height: 100%;
+    }
+
+}
+    .product{
+        width: 40%;
+        margin: 8px;
+    }
+    .product img{
+        width: 80%;
+        height: auto;
+    }
+    .product h2,h3{
+        font-size: 10pt;
+    }
+    .addToCartIndex{
+        padding: 5px;
+    }
+    .div-slideshow{
+        padding: 10px;
+    }
+    .div-slideshow h1{
+        font-size: 20pt;
+    }
+    .headerProd{
+        font-size: 20pt;
+    }
 }

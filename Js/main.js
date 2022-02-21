@@ -29,7 +29,7 @@ function slidechange(nr) {
     t = setTimeout(function () { slidechange(1); }, 4000);
 }
 document.body.addEventListener('load', slidechange(0));
-
+/* 
 const products = [
     { id: 0, imagePath: "product1.jpg", discount: 40, name: "Laptop Hp", cmimi: 1299.00, kategoria: "Laptop", descript: "HP 17-inch Laptop, 11th Generation Intel Core i5-1135G7, Intel Iris Xe Graphics, 8 GB RAM, 256 GB SSD, Windows 11 Home (17-cn0025nr,Natural Silver)" },
     { id: 1, imagePath: "product2.jpg", discount: 0, name: "Laptop  Bitecool", cmimi: 350.00, kategoria: "Laptop", descript: "Windows 10 Pro Laptop, BiTECOOL 2022 New 15.6 inches FHD(1920x1080) Display Pc Laptops, with Intel Celeron J4005 Dual Core, 6GB LPDDR4 and 120GB SSD, 2.4G WiFi, BT4.0 and Long Lasting Battery, Mic" },
@@ -43,7 +43,7 @@ const products = [
     { id: 9, imagePath: "product10.jpg", discount: 20, name: "Custom Gaming PC", cmimi: 999.99, kategoria: "Pc", descript: "Windows 10 Home, AMD Ryzen 5 3600, 6x 3.60 GHz, Gigabyte B550M S2H, S. AM4 v2, NVIDIA GeForce GTX 1660 SUPER 6GB, Cooler Master MasterBox MB520, RGB, 16GB DDR4-3200, AMD Standard Kühler, 500 GB | Crucial MX500" },
     { id: 10, imagePath: "product7.png", discount: 0, name: "Ndegjuse Raycon", cmimi: 82.00, kategoria: "Aksesorë", descript: "Raycon - H20 Wireless Noise-Cancelling Over-the-Ear Headphones" },
     { id: 11, imagePath: "product12.png", discount: 10, name: "Ndegjuse 1more", cmimi: 99.00, kategoria: "Aksesorë", descript: "Black 1More Comfobuds True Wireless In-Ear Headphones" },
-]
+] *//* 
 window.onload = function () {
     let count = 0;
     var showElement = document.getElementById("products");
@@ -83,7 +83,7 @@ window.onload = function () {
         countShowProduct++;
     });
 };
-
+ 
 function goBack() {
     document.getElementById("wrapper").style.display = "none";
     document.getElementById("hide-main-content").style.display = "flex";
@@ -212,4 +212,24 @@ function discount(disc) {
         </div>`
         }
     }
+}*/
+
+function burgerKategoria(){
+    document.querySelector(".asideBurger").style.display = "block";
+    document.querySelector(".asideCover").style.display = "block";
+    document.querySelector('.asideBurgerChildren').style.display = "none";
+    setTimeout(() => {
+        document.querySelector('.asideBurgerChildren').style.display = "block";
+    }, 1000);
+}
+function removeAside(){
+    /* document.getElementById("asideBurger").style.display = "none"; */
+    document.querySelector('.asideBurger').classList.add("asideCoverRemove");
+    //document.querySelector('.asideBurger').classList.remove("asideCover");
+    document.querySelector('.asideBurgerChildren').style.display = "none";
+    setTimeout(() => {
+        document.querySelector('.asideCover').style.display = "none";
+        document.querySelector('.asideBurger').style.display = "none";
+        document.querySelector('.asideBurger').classList.remove("asideCoverRemove");
+    }, 1000);
 }
