@@ -42,6 +42,9 @@ abstract class Produkti implements Kategoria{
     public function setDiscount($emri){
         $this -> emri = $emri;
     }
+    public function __toString(){
+        return $this -> getKodiProd()." ".$this -> getEmri()." ". $this -> getCmimi()." ".$this -> getDiscount();
+    }
 }
 class Aksesori extends Produkti{
     private $pershkrimi;
@@ -134,7 +137,6 @@ class Kompjuteri extends Produkti{
         else return "PC";
     }
 }
-
 interface Kategoria{
     public function getKategoria(); 
 }

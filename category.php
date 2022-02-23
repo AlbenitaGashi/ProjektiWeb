@@ -1,7 +1,6 @@
 <?php 
     include "header.php";
     include "search.php";
-    //require "dbProd.php";
     require_once "./controllers/ProductController.php";
     $prodController = new ProductController;
     $products = $prodController -> readData();
@@ -36,7 +35,7 @@
         }
     } 
     function calcDiscount($cmimi, $discount){
-        return $cmimi - ($cmimi * $discount / 100);
+        return round(($cmimi - ($cmimi * $discount / 100)), 2);
     }
     echo "</div>";
     ?>

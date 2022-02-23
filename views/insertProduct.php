@@ -63,7 +63,12 @@ function checkFields($fields){
             <br>
             Procesori:
             <input type="text" name = "cpu">
-            <br>
+            <br><!-- 
+            <select name="lloji">
+                <option value=""></option>
+                <option value="Laptop">Laptop</option>
+                <option value="PC">PC</option>
+            </select> -->
         <?php
         }
         if($kategoria == "SmartDevices"){

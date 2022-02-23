@@ -1,6 +1,8 @@
 <head>
 <link rel="stylesheet" href="Css/sharedStyle.css">
 </head>
+<?php
+?>
 <header class="header">
         <div>
             <img class="logoImg" onclick="location.href = 'index.html'" src="Images/logo.png" alt="">

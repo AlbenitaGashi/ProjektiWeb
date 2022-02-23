@@ -9,14 +9,13 @@
     <?php
     include "header.php";
     include "search.php";
-    //include "dbProd.php";
     require_once "./controllers/ProductController.php";
     $productControl = new ProductController;
     $id = $_GET['kodiProd'];
     $singleProd = $productControl->readAProduct($id);
     function calcDiscount($cmimi, $discount)
     {
-        return $cmimi - ($cmimi * $discount / 100);
+        return round(($cmimi - ($cmimi * $discount / 100)), 2);
     }
     ?>
 </head>

@@ -31,6 +31,6 @@ foreach($products as $product){
         <?php
 } 
 function calcDiscount($cmimi, $discount){
-    return $cmimi - ($cmimi * $discount / 100);
+    return round(($cmimi - ($cmimi * $discount / 100)), 2);
 }
 ?> 
