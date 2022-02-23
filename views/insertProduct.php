@@ -4,14 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = '../Css/sharedStyle.css'>
     <title>Document</title>
 </head>
 <?php 
 $kategoria = $_GET['Kategoria'];
 require_once '../controllers/ProductController.php';
+include '../header.php';
 $product = new ProductController;
 if(isset($_POST['submit'])){
-    $product -> insert($_POST, $kategoria);
+    $checked = checkFields($_POST);
+    if($checked){
+        echo "<script>confirm('Insertimi eshte kryer me sukses!')</script>";
+        $product -> insert($_POST, $kategoria);
+    }
+    else{
+        echo "<script>alert('Gjitha fushat duhet te plotesohen!')</script>";
+    }
+}
+function checkFields($fields){
+    foreach($fields as $field){
+        if($field == null || $field == ""){
+            echo $field;
+            return false;
+        }
+    }
+    return true;
 }
 ?>
 <body>
@@ -26,7 +44,7 @@ if(isset($_POST['submit'])){
         <input type="text" name = "emri">
         <br>
         Cmimi:
-        <input type="number" name = "cmimi">
+        <input type="number" step = "0.01" name = "cmimi">
         <br>
         Discount:
         <input type="number" name = "discount">
@@ -46,10 +64,6 @@ if(isset($_POST['submit'])){
             Procesori:
             <input type="text" name = "cpu">
             <br>
-            <select name="lloji" id="">
-                <option value="Laptop">Laptop</option>
-                <option value="PC">PC</option>
-            </select>
         <?php
         }
         if($kategoria == "SmartDevices"){

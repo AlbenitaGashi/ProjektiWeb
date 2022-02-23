@@ -5,7 +5,9 @@
     <title>Rreth neve</title>
     <link rel="stylesheet" href="Css/aboutUs.css">
     <link rel="stylesheet" href="Css/sharedStyle.css">
-    <?php include "header.php"?>
+    <?php
+    include "header.php";
+    ?>
 </head>
 
 <body>

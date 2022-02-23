@@ -16,7 +16,7 @@
     <div class="main-content" id="hide-main-content">
         <aside class="aside">
             <h1>Kategoritë</h1>
-            <button><a href="category.php?category=Aksesorë">Aksesorë</a></button>
+            <button><a href="category.php?category=Aksesori">Aksesorë</a></button>
             <button><a href="category.php?category=Laptop">Laptop</a></button>
             <button><a href="category.php?category=PC">PC</a></button>
             <button><a href="category.php?category=Phone/Tablet">Celulare/Tablet</a></button>
@@ -67,7 +67,7 @@
         <h1>Kategoritë</h1>
         <hr>
             <ul class="burgerAsideCategory">
-                <li onclick="removeAside()"><a href="category.php?category=Aksesorë">Aksesorë</a></li>
+                <li onclick="removeAside()"><a href="category.php?category=Aksesori">Aksesorë</a></li>
                 <li onclick="removeAside()"><a href="category.php?category=Laptop">Laptop</a></li>
                 <li onclick="removeAside()"><a href="category.php?category=PC">PC</a></li>
                 <li onclick="removeAside()"><a href="category.php?category=Phone/Tablet">Celulare/Tablet</a></li>
@@ -78,12 +78,7 @@
     <div>
         <h1 class="headerProd">Të Gjitha Produktet</h1>
         <div class="div-products" id="products"><?php include "products.php"?></div>
-    </div><!-- 
-    <div id="singleProd"></div>
-    <div style="display: none;" id="category">
-        <div id="nameCategory"></div>
-        <div id="productsCategory"></div>
-    </div> -->
+    </div>
     <div id="discount"></div>
     <footer class="footer">
         <h4>Disclaimer</h5>

@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="Css/loginStyle.css">
     <link rel="stylesheet" href="Css/sharedStyle.css">
     <title>Login</title>
-    <?php include "header.php"?>
+    <?php
+    include "header.php";
+    ?>
 </head>
 
 <body>

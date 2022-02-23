@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="Css/ContactUs.css">
     <link rel="stylesheet" href="Css/sharedStyle.css">
-    <?php include "header.php"?>
+    <?php 
+    include "header.php";
+    ?>
 </head>
 
 <body>

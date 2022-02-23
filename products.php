@@ -1,21 +1,24 @@
-<?php 
-require "dbProd.php";
+<?php
+//require "dbProd.php";
+require_once "./controllers/ProductController.php";
+$allProduct = new ProductController;
+$products = $allProduct ->readData();
 foreach($products as $product){
     ?>
         <div class='product'>
-        <h2> <?php echo $product['name']?></h2>
+        <h2> <?php echo $product['emri']?></h2>
         <?php if($product["discount"] != 0){ ?>
-            <a href="singleProd.php?id=<?php echo $product['id']?>">
+            <a href="singleProd.php?kodiProd=<?php echo $product['kodiProd']?>">
             <div style = "position:relative;">
-                <img src='Images/ProductImg/<?php echo $product["imagePath"]?>'  alt="" >
+                <img src='<?php echo $product["image"]?>'  alt="" >
                 <label class = "discount">- <?php echo $product["discount"];?>%</label>
             </div>
             </a>
         <h3>Çmimi: <label style = "text-decoration :line-through"><?php echo $product['cmimi']?>€</label><label><?php echo " ".calcDiscount($product['cmimi'], $product['discount'])?>€</label></h3>
         <?php } if($product["discount"] == 0){?>
-            <a href="singleProd.php?id=<?php echo $product['id']?>">
-            <div onclick="location.href = 'singleProd.php'<?php echo $_SESSION['id'] = $product['id'];?>" style = "position:relative;">
-                <img src='Images/ProductImg/<?php echo $product["imagePath"]?>'  alt="" >
+            <a href="singleProd.php?kodiProd=<?php echo $product['kodiProd']?>">
+            <div onclick="location.href = 'singleProd.php'<?php echo $product['kodiProd'];?>" style = "position:relative;">
+                <img src='<?php echo $product["image"]?>'  alt="" >
             </div>
             </a>
         <h3>Çmimi: <label><?php echo $product['cmimi']?>€</label></h3>

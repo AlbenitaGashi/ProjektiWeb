@@ -1,6 +1,6 @@
 <?php
 abstract class Produkti implements Kategoria{
-    private $image = './Image/ProductImg/';
+    private $image = './Images/ProductImg/';
     private $kodiProd;
     private $emri;
     private $cmimi;
@@ -16,7 +16,7 @@ abstract class Produkti implements Kategoria{
         return $this -> image;
     }
     public function setImage($image){
-        $this -> image = './Image/'.$image; 
+        $this -> image = './Images/'.$image; 
     }
     public function getKodiProd(){
         return $this -> kodiProd;
@@ -82,7 +82,7 @@ class SmartDevices extends Produkti{
         $this -> ram = $ram;
     }
     public function getCpu(){
-        return $this -> storage;
+        return $this -> cpu;
     }
     public function setCpu($cpu){
         $this -> cpu = $cpu;
@@ -138,4 +138,3 @@ class Kompjuteri extends Produkti{
 interface Kategoria{
     public function getKategoria(); 
 }
-?>
