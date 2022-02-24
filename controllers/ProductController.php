@@ -196,7 +196,7 @@ class ProductController{
             $query -> bindParam(':cpu', $cpu);
             $query -> execute();
         }
-        header('Location: dashboard.php');
+        header('Location: ../dashboard.php');
     }
     public function delete($kodiProd){
         $query = $this -> database -> pdo -> prepare('DELETE from produkti where kodiProd = :kodiProd');

@@ -1,0 +1,27 @@
+.nav-style{
+    list-style: none;
+    display:flex;
+    justify-content: center;
+}
+.nav-style li{
+    margin-left: 20px;
+}
+#imgDashboard{
+    width: 50px;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.table thead tr {
+    background-color: #170098;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+.table th,
+.table td {
+    padding: 15px;
+}

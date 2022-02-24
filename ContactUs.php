@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="Css/sharedStyle.css">
     <?php 
     include "header.php";
+    require_once './controllers/ContactController.php';
+    $contactController = new ContactController;
+    if(isset($_POST['submit'])){
+        $contactController -> insert($_POST);
+    }
     ?>
 </head>
 
@@ -15,29 +20,29 @@
     <div class="main-div">
         <div class="form-div">
             <h1>Contact Us</h1>
-            <form class="form" id="rel" action="">
+            <form class="form" id="rel" method = "post">
                 <div class="contactForm">
                     Emri:
-                    <input type="text" id="emri" onclick="removeError('errorEmri', 'emri')">
+                    <input type="text" name = "emri" id="emri" onclick="removeError('errorEmri', 'emri')">
                     <span style="display: none;" id='errorEmri' class='allSpan'>Sheno emrin!</span>
                 </div>
                 <div class="contactForm">
                     Mbiemri:
-                    <input type="text" id="mbiemri" onclick="removeError('errorMbiemri', 'mbiemri')">
+                    <input type="text" name = "mbiemri" id="mbiemri" onclick="removeError('errorMbiemri', 'mbiemri')">
                     <span style="display: none;" id='errorMbiemri' class='allSpan'>Sheno mbiemrin!</span>
                 </div>
                 <div class="contactForm">
                     Email:
-                    <input type="Email" id="email" onclick="removeError('errorEmail', 'email')">
+                    <input type="Email" name = "email" id="email" onclick="removeError('errorEmail', 'email')">
                     <span style="display: none;" id='errorEmail' class='allSpan'>Emaili nuk eshte valid!</span>
                 </div>
                 <div class="contactForm">
                     Message:
-                    <textarea name="" id="message" cols="30" rows="10"
+                    <textarea name="message" id="message" cols="30" rows="10"
                         onclick="removeError('errorMessage', 'message')"></textarea>
                     <span style="display: none;" id='errorMessage' class='allSpan'>Sheno mesazhin!</span>
                 </div>
-                <input id="submit-button" type="Submit" value="Dërgo" onclick="validateContacts()">
+                <input id="submit-button" type="Submit" name = "submit" value="Dërgo" onclick="validateContacts()">
             </form>
             <div class="contacts">
                 <div onclick="location.href = 'https://www.facebook.com/'" class="singleContact">

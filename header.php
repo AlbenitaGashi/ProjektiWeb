@@ -11,6 +11,11 @@
             <div><button onclick="location.href = 'index.php'">Home</button></div>
             <div><button onclick="location.href = 'aboutUs.php'">About Us</button></div>
             <div><button onclick="location.href ='ContactUs.php'">Contacts</button></div>
+            <?php 
+                //if(isset($_COOKIE['roli']) && $_COOKIE['roli'] == 1){
+            ?>
+            <div><button onclick="location.href ='dashboard.php'">Dashboard</button></div>
+            <?php //} ?> 
         </div>
         <div class="logReg">
             <button onclick="location.href='Register.php'" id="register">Register</button>

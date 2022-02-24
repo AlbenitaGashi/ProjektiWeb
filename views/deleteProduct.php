@@ -5,5 +5,5 @@
     }
     $productController = new ProductController;
     $productController -> delete($kodiProd);
-    header('Location: dashboard.php');
+    header('Location: ../dashboard.php');
 ?>
