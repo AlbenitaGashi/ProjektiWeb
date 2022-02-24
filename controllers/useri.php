@@ -1,82 +1,80 @@
 <?php
-
-abstract class User{
-    private $Emri;
-    private $Mbiemri;
-    private $DataLindjes;
-    private $Gjinia;
-    private $Email;
-    private $Username;
-    private $Password;
-
-
-    public function __construct( $Emri,
-                                $Mbiemri,
-                                $DataLindjes,
-                                $Gjinia,
-                                $Email,
-                                $Username,
-                                $Password,
- ) {
-        $this->Emri = $Emri;
-        $this-> Mbiemri = $Mbiemri;
-        $this-> DataLindjes = $DataLindjes;
-        $this->Gjinia = $Gjinia;
-        $this->Email = $Email;
-        $this->Username = $Username;
-        $this->Password = $Password;
-
-
-
+abstract class Useri{
+    private $emri;
+    private $mbiemri;
+    private $dataLindjes;
+    private $gjinia;
+    private $email;
+    private $username;
+    private $password;
+    public function __construct($emri, $mbiemri, $dataLindjes, $gjinia, $email, $username, $password) {
+        $this-> emri = $emri;
+        $this-> mbiemri = $mbiemri;
+        $this-> dataLindjes = $dataLindjes;
+        $this-> gjinia = $gjinia;
+        $this-> email = $email;
+        $this-> username = $username;
+        $this-> password = $password;
     }
-
-    public function getUsername (){
-
-        return $this->Username;
+    public function getEmri(){
+        return $this -> emri;
     }
-
-    public function setUsername ($username) {
-        $this->username = $username;
+    public function setEmri($emri){
+        $this -> emri = $emri;
     }
-
-    public function __toString(){
-        return "Prova 8839";
-
+    public function getMbiemri(){
+        return $this -> mbiemri;
     }
-    abstract function getRole(); #metod abstrakte
+    public function setMbiemri($mbiemri){
+        $this -> mbiemri = $mbiemri;
+    }
+    public function getDataLindjes(){
+        return $this -> dataLindjes;
+    }
+    public function setDataLindjes($dataLindjes){
+        $this -> dataLindjes = $dataLindjes;
+    }
+    public function getGjinia(){
+        return $this -> gjinia;
+    }
+    public function setGjinia($gjinia){
+        $this -> gjinia = $gjinia;
+    }
+    public function getUsername(){
+        return $this -> username;
+    }
+    public function setUsername($username){
+        $this -> username = $username;
+    }
+    public function getEmail(){
+        return $this -> email;
+    }
+    public function setEmail($email){
+        $this -> email = $email;
+    }
+    public function getPassword(){
+        return $this -> password;
+    }
+    public function setPassword($password){
+        $this -> password = $password;
+    }
+    abstract function getRole();
 }
 
-class Admin extends User {
-    private $permissions;
-
-    public function __construct ($Emri, $Mbiemri, $DataLindjes, $Gjinia, $Email, $Username, $Password,  $permissions) {
-            parent:: __construct ($Emri, $Mbiemri, $DataLindjes, $Gjinia, $Email, $Username, $Password);
-            $this ->permissions = $permissions;
-
-
+class Admin extends Useri {
+    public function __construct ($emri, $mbiemri, $dataLindjes, $gjinia, $email, $username, $password) {
+        parent:: __construct ($emri, $mbiemri, $dataLindjes, $gjinia, $email, $username, $password);
     }
-
-    public function getPermissions (){
-        return $this -> permissions;
-    }
-
-    public function __toString(){
-        return parent:: __toString() ."from Admin";
-
-    }
-
     public function getRole(){
-
-
+        return 1;
     }
 }
-class SimpleUser extends User {
-public function getRole(){
-        
-
+class SimpleUser extends Useri {
+    public function __construct($emri, $mbiemri, $dataLindjes, $gjinia, $email, $username, $password){
+        parent::__construct($emri, $mbiemri, $dataLindjes, $gjinia, $email, $username, $password);
     }
-
+    public function getRole(){
+        return 0;
+    }
 }
-
-
 ?>

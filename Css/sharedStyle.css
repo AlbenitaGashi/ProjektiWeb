@@ -48,11 +48,132 @@
 .nav-div button:active {
     background-color: rgb(122, 131, 216);
 }
+
+.burgerIcon{
+    position: absolute;
+    left: 10px;
+    top: 15%;
+    display: none;
+}
+.burgerIcon img{
+    width: 40px;
+}
+.burgerIcon img:active{
+    filter: brightness(70%);
+}
+.asideBurger{
+    display: none;
+    width: 40%;
+    height: 100%;
+    z-index:1000;
+    background: rgba(0, 53, 107, 0.9);
+/*  background-color: #ffffff10;
+    backdrop-filter: blur(12px); */
+    /* -webkit-backdrop-filter: blur(12px); */
+    position: fixed;
+    animation: asideBurger 1s ease-in-out;
+}
+.asideBurgerChildren h1{
+    text-align: center;
+    color: #d3d5e6;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#xIcon{
+    width: 25px;
+    padding:10px;
+}
+.burgerAsideCategory li{
+    padding-left: 10px;
+    color: #255b93;;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    border-bottom: 0.5px solid;
+}
+.burgerAsideCategory hr{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+@keyframes asideBurger {
+
+    0% {
+        width: 0;
+        height: 100%;
+    }
+
+    100% {
+        width: 40%;
+    }
+
+}
+.asideCover{
+    display: none;
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff10;
+    z-index:1000;
+    backdrop-filter: blur(12px);
+    /* box-shadow: 0px 0px 1px 5000px rgb(0 0 0 / 70%); */
+}
+
+.asideCoverRemove{
+    animation: asideBurgerRemove 1s ease-in-out;
+}
+
+@keyframes asideBurgerRemove {
+
+    0% {
+        width: 40%;
+    }
+    100% {   
+        width: 0;
+        height: 100%;
+    }
+
+}
+.aside{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    background: #00356b;
+    align-items: center;
+    justify-content: space-evenly;
+    color: aliceblue;
+}
+.aside button{
+    border: none;
+    width: 90%;
+    height: 60px;
+    border-radius: 50px;
+    background-color: #447db6;
+    color: aliceblue;
+}
+.aside button:hover{
+    background-color: #5fafff;
+    transition: 0.5s;
+    border-radius: 0;
+}
+.aside button:active{
+    background-color: #30547a;
+}
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(0 53 107);
+}
+.user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.profilePic img{
+    width: 40px;
+    border-radius: 50px;
+    margin-right: 15px;
 }
 .footer{
     width: 100%;
@@ -72,4 +193,68 @@
     .logReg{
         display: none;
     }
+}
+
+@media (max-width: 768px) {
+    .aside {
+        display: none;
+    }
+    .slider-background{
+        width: 100%;
+    }
+    .burgerIcon{
+        display: block;
+    }
+    .nav-div{
+        display: none;
+    }
+    .product{
+        width: 35%;
+    }
+    .product img{
+        width: 100%;
+        height: auto;
+    }
+    .product h3,h2{
+        font-size: 11pt;
+    }
+    .relativeSearchAside{
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {
+    .asideBurger{
+        width: 100%;
+    }
+    .relativeSearch{
+        display: none;
+    }
+    .relativeSearchAside{
+        display: none;
+    }
+    @keyframes asideBurger {
+
+        0% {
+            width: 0;
+            height: 100%;
+        }
+    
+        100% {
+            width: 100%;
+        }
+    
+    }
+    
+@keyframes asideBurgerRemove {
+
+    0% {
+        width: 100%;
+    }
+    100% {   
+        width: 0;
+        height: 100%;
+    }
+
+}
 }

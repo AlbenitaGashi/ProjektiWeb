@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Css/style.css">
     <link rel="stylesheet" href="Css/sharedStyle.css">
     <?php
+    session_start();
     include "header.php";
     include "search.php";
     ?> 
@@ -46,7 +47,7 @@
             </div>
         </div>
     </div>
-    <div class="asideCover" onclick = "removeAside()">
+    <!-- <div class="asideCover" onclick = "removeAside()">
     </div>
     <aside class="asideBurger">
         <div class = "asideBurgerChildren">
@@ -73,7 +74,7 @@
                 <li onclick="removeAside()"><a href="category.php?category=Phone/Tablet">Celulare/Tablet</a></li>
             </ul>
         </div>
-        </aside>
+        </aside> -->
     <div>
     <div>
         <h1 class="headerProd">Të Gjitha Produktet</h1>

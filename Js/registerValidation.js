@@ -33,7 +33,6 @@ function registerLogin() {
     if (!regexEmail.test(email)) {
         document.getElementById('borderEmail').style.border = "2px solid #fd5c5c";
         document.getElementById('errorEmail').style.display = "block";
-
         count++;
     }
     if (!regexPassword.test(pw1)) {
@@ -43,21 +42,22 @@ function registerLogin() {
     }
     var dateT = new Date();
     date = date.replaceAll('-', '');
-    console.log(date);
-    var dateToday = dateT.toISOString()/* .replaceAll('-', '').substring(0,8) */; console.log((dateT.getFullYear() - 13) + " " + (dateT.getMonth() + 1) + " " + (dateT.getDate()));
-    var countData = 0;
-    if (date == "" || date == null || ((date.substring(0, 4)) > dateT.getFullYear() - 12) || ((date.substring(0, 4)) < "1900")) {
+    if (date == "" || date == null || ((date.substring(0, 4)) > (dateT.getFullYear() - 12)) || ((date.substring(0, 4)) < "1900")) {;
         document.getElementById('date').style.border = "2px solid #fd5c5c";
         document.getElementById('errorDate').style.display = "block";
         count++;
     }
-    else if ((date.substring(0, 4)) == dateT.getFullYear() - 12 && date.substring(4, 6) == (dateT.getMonth() + 1) && parseInt(date.substring(6, 8)) > (dateT.getDate())) {
+    else if ((date.substring(0, 4)) == (dateT.getFullYear() - 12) && date.substring(4, 6) > (dateT.getMonth() + 1)) {
+        document.getElementById('date').style.border = "2px solid #fd5c5c";
+        document.getElementById('errorDate').style.display = "block";
+    }
+    else if(((date.substring(0, 4)) == (dateT.getFullYear() - 12)) && date.substring(4, 6) == (dateT.getMonth() + 1) && parseInt(date.substring(6, 8)) > (dateT.getDate())){
         document.getElementById('date').style.border = "2px solid #fd5c5c";
         document.getElementById('errorDate').style.display = "block";
     }
     console.log(date.substring(6, 8)) + " " + (dateT.getDay());
 
-    if (document.getElementById('select').value == "Gjinia") {
+    if (document.getElementById('select').value == "") {
         document.getElementById('borderGjinia').style.border = "2px solid #fd5c5c";
         document.getElementById('errorGjinia').style.display = "block";
         count++;
@@ -68,27 +68,13 @@ function registerLogin() {
         count++;
     }
     if (count == 0) {
-        confirm("Regjistrimi eshte kryer me sukses!");
-        var activeReload = document.getElementById('rel');
-        function activeRel() {
-            return true;
-        }
-        activeReload.addEventListener('submit', activeRel);
+        var reload = document.getElementById('relReg');
+        reload.onsubmit = function(e){ return true; }
     }
-    else {
-        var stopReload = document.getElementById('relReg');
-        function stopRel(stop) {
-            stop.preventDefault();
-        }
-        stopReload.addEventListener('submit', stopRel);
-        setTimeout(() => {
-            document.getElementById("submit").disabled = false;
-        }, 2000);
-        activeSubmit();
+    else if(count != 0){
+        var reload = document.getElementById('relReg');
+        reload.onsubmit = function(e){ e.preventDefault()}
     }
-}
-function activeSubmit() {
-    document.getElementById("submit").disabled = true;
 }
 function removeError(spanId, inputId) {
     document.getElementById(spanId).style.display = "none";
