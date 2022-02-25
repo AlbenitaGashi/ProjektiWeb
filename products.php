@@ -3,6 +3,7 @@
 require_once "./controllers/ProductController.php";
 $allProduct = new ProductController;
 $products = $allProduct ->readData();
+$count = 0;
 foreach($products as $product){
     ?>
         <div class='product'>
@@ -29,6 +30,10 @@ foreach($products as $product){
         </div>
         </div>
         <?php
+        $count++;
+        if($_SERVER['SCRIPT_NAME'] == '/ProjektiWeb/index.php' && $count == 8){
+            break;
+        }
 } 
 function calcDiscount($cmimi, $discount){
     return round(($cmimi - ($cmimi * $discount / 100)), 2);

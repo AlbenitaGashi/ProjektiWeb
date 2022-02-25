@@ -203,4 +203,9 @@ class ProductController{
         $query -> bindParam(':kodiProd', $kodiProd);
         $query -> execute();
     }
+    public function searchresult($search){
+        $query = $this -> database -> pdo -> prepare('SELECT * from produkti where emri like %:search%');
+        $query -> bindParam(":search", $search);
+        return $query -> execute();
+    }
 }

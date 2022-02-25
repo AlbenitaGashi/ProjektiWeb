@@ -3,7 +3,7 @@
     $userController = new UserController;
     $users = $userController ->readData();
     ?> 
-    <h1>Users</h1>
+    <h1 style = "text-align:center;">Table Users</h1>
     
     <table class = "table">
         <thead>

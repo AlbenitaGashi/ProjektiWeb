@@ -11,7 +11,12 @@ class UserController{
         return $query -> fetchAll();
     }
     public function insert($request){
-        $useri = new SimpleUser($request['emri'], $request['mbiemri'], $request['dataLindjes'], $request['gjinia'], $request['email'], $request['username'], $request['password']);
+        if(isset($_GET['admin'])){
+            $useri = new Admin($request['emri'], $request['mbiemri'], $request['dataLindjes'], $request['gjinia'], $request['email'], $request['username'], $request['password']);
+        }
+        else{
+            $useri = new SimpleUser($request['emri'], $request['mbiemri'], $request['dataLindjes'], $request['gjinia'], $request['email'], $request['username'], $request['password']);
+        }
         $emri = $useri -> getEmri();
         $mbiemri = $useri -> getMbiemri();
         $dataLindjes = $useri -> getDataLindjes();
@@ -20,7 +25,7 @@ class UserController{
         $username = $useri -> getUsername();
         $password = $useri -> getPassword();
         $roli = $useri -> getRole();
-        $query = $this -> database -> pdo -> prepare("INSERT INTO useri (emri, mbiemri, dataLindjes, gjinia, email, username, password, roli) values(:emri, :mbiemri, :dataLindjes, :gjinia, :email, :username, :password), :roli");
+        $query = $this -> database -> pdo -> prepare("INSERT INTO useri (emri, mbiemri, dataLindjes, gjinia, email, username, password, roli) values(:emri, :mbiemri, :dataLindjes, :gjinia, :email, :username, :password, :roli)");
         $query -> bindParam(":emri", $emri);
         $query -> bindParam(":mbiemri", $mbiemri);
         $query -> bindParam(":dataLindjes", $dataLindjes);
@@ -35,11 +40,9 @@ class UserController{
             $query -> bindParam(":username", $username);
             $query -> execute();
         }
-    }
-    public function addAdmin($useri){
         if($useri instanceof Admin){
-            $query = $this -> database -> pdo -> prepare("INSERT INTO admin (id) values (:id)");
-            $query -> bindParam(":id", $id);
+            $query = $this -> database -> pdo -> prepare("INSERT INTO admin (username) values (:username)");
+            $query -> bindParam(":username", $username);
             $query -> execute();
         }
     }
@@ -50,7 +53,7 @@ class UserController{
         return $query -> fetch();
     }
     public function update($request){
-        if($_GET['roli'] == 0){
+        if($_GET['roli'] == 0){ 
             $useri = new SimpleUser($request['emri'], $request['mbiemri'], $request['dataLindjes'], $request['gjinia'], $request['email'], $request['username'], "");
         }
         else if($_GET['roli'] == 1){

@@ -24,7 +24,7 @@
         </aside>
         <div class="slider-background">
             <div class="div-slideshow">
-                <h1>Top of the day</h1>
+                <h1>News</h1>
                 <div class="slider">
                     <a href="singleProd.php?id=11">
                     <div class="slideContent animation">
@@ -36,7 +36,7 @@
                         <img src="Images/SliderImg/sliderImg2.png" class="imgSliderSize" alt="">
                     </div>
                     </a>
-                    <div class="slideContent animation" onclick="discount(20)">
+                    <div class="slideContent animation" >
                         <img src="Images/SliderImg/sliderImg3.jfif" class="imgSliderSize" alt="">
                     </div>
                     <div class="arrow">
@@ -49,7 +49,7 @@
     </div>
     <div>
     <div>
-        <h1 class="headerProd">Të Gjitha Produktet</h1>
+        <h1 class="headerProd">Produktet e dites</h1>
         <div class="div-products" id="products"><?php include "products.php"?></div>
     </div>
     <div id="discount"></div>

@@ -3,7 +3,7 @@
     $contactController = new ContactController;
     $contacts = $contactController ->readData();
     ?> 
-    <h1>Contacts</h1>
+    <h1 style = "text-align:center;">Table Contacts</h1>
     
     <table class = "table">
         <thead>

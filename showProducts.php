@@ -1,10 +1,9 @@
 <?php 
     require_once "./controllers/ProductController.php";
-    include 'header.php';
     $prodController = new ProductController;
     $products = $prodController ->readData();
     ?> 
-    <h1>Products</h1>
+    <h1 style = "text-align:center;">Tabela Products</h1>
     
     <table class = "table">
         <thead>

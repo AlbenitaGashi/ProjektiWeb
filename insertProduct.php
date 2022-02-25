@@ -8,9 +8,9 @@
     <title>Document</title>
 </head>
 <?php 
-$kategoria = $_GET['Kategoria'];
-require_once '../controllers/ProductController.php';
-include '../header.php';
+$kategoria = $_GET['kategoria'];
+require_once 'controllers/ProductController.php';
+include 'header.php';
 $product = new ProductController;
 if(isset($_POST['submit'])){
     $checked = checkFields($_POST);
