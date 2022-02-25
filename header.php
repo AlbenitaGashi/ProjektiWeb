@@ -50,13 +50,16 @@
         <h1>Menu</h1>
         <hr>
             <ul class="burgerAsideCategory">
+                <?php if(isset($_COOKIE['emri'])){?>
+                    <li><a href='dashboard.php'>Dashboard</a></li>
+                <?php } ?>
                 <li><a href = 'index.php'>Home</a></li>
                 <li><a href = 'aboutUs.php'>About Us</a></li>
                 <li><a href ='ContactUs.php'>Contacts</a></li>
                 <li><a href='Register.php' id="register">Register</a></li>
                 <li><a href='login.php'  id="login">Login</a></li>
                 <?php if(isset($_COOKIE['emri'])){?>
-                    <li><a href='logout.php'  id="login">Logout</a></li>
+                    <li><a href='logout.php'>Logout</a></li>
                 <?php } ?>
             </ul>
         <h1>Kategoritë</h1>

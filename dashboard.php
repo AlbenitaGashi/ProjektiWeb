@@ -11,6 +11,7 @@
     include './showProducts.php';
     //include './showUsers.php';
     include './showContacts.php';
+    include './showUsers.php';
     ?>
 </head>
 <body>

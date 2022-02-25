@@ -11,7 +11,6 @@
         $userController = new UserController;
         $users = $userController -> readData();
         foreach($users as $user){
-            echo $user['username'];
             if($user['username'] == $username && $user['password'] == $password){
                 echo "!";
                 setcookie('username', $user['username'], time()+60*60*24);
@@ -23,13 +22,4 @@
         }
         return false;
     }
-    function hello(){
-        $userController = new UserController;
-        $users = $userController -> readData();
-        
-        foreach($users as $user){
-            echo $user['username'];
-        }
-    }
-    hello();
 ?>

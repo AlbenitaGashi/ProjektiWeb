@@ -1,5 +1,6 @@
 <?php 
 require_once 'C:\xampp\htdocs\ProjektiWeb\config\Database.php';
+include "Contacts.php";
 class ContactController{
     public $database;
     public function __construct(){
@@ -10,11 +11,16 @@ class ContactController{
         return $query -> fetchAll();
     }
     public function insert($request){
+        $userContact = new Contacts($request['emri'], $request['mbiemri'], $request['email'],  $request['message']);
+        $emri = $userContact -> getEmri();
+        $mbiemri = $userContact -> getMbiemri();
+        $email = $userContact -> getEmail();
+        $message = $userContact -> getMessage();
         $query = $this->database->pdo->prepare('INSERT INTO contacts (emri, mbiemri, email, message) VALUES (:emri, :mbiemri, :email, :message)');
-        $query->bindParam(':emri', $request['emri']);
-        $query->bindParam(':mbiemri', $request['mbiemri']);
-        $query->bindParam(':email', $request['email']);
-        $query->bindParam(':message', $request['message']);
+        $query->bindParam(':emri', $emri);
+        $query->bindParam(':mbiemri', $mbiemri);
+        $query->bindParam(':email', $email);
+        $query->bindParam(':message', $message);
         $query->execute();
     }
     public function delete($id){

@@ -47,34 +47,6 @@
             </div>
         </div>
     </div>
-    <!-- <div class="asideCover" onclick = "removeAside()">
-    </div>
-    <aside class="asideBurger">
-        <div class = "asideBurgerChildren">
-            <img src="Images/Icons/xIcon.png" id = "xIcon" onclick = "removeAside()" alt="">
-            <div class="relativeSearchAside">
-            <input class="search" type="search" placeholder="Çfarë po kërkoni?">
-            <img src="Images/Icons/searchIcon.png" id="searchIcon" alt="">
-        </div>
-        <h1>Menu</h1>
-        <hr>
-            <ul class="burgerAsideCategory">
-                <li><a href = 'index.php'>Home</a></li>
-                <li><a href = 'aboutUs.php'>About Us</a></li>
-                <li><a href ='ContactUs.php'>Contacts</a></li>
-                <li><a href='Register.php' id="register">Register</a></li>
-                <li><a href='login.php'  id="login">Login</a></li>
-            </ul>
-        <h1>Kategoritë</h1>
-        <hr>
-            <ul class="burgerAsideCategory">
-                <li onclick="removeAside()"><a href="category.php?category=Aksesori">Aksesorë</a></li>
-                <li onclick="removeAside()"><a href="category.php?category=Laptop">Laptop</a></li>
-                <li onclick="removeAside()"><a href="category.php?category=PC">PC</a></li>
-                <li onclick="removeAside()"><a href="category.php?category=Phone/Tablet">Celulare/Tablet</a></li>
-            </ul>
-        </div>
-        </aside> -->
     <div>
     <div>
         <h1 class="headerProd">Të Gjitha Produktet</h1>
