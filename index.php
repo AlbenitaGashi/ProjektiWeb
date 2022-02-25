@@ -20,7 +20,7 @@
             <button><a href="category.php?category=Aksesori">Aksesorë</a></button>
             <button><a href="category.php?category=Laptop">Laptop</a></button>
             <button><a href="category.php?category=PC">PC</a></button>
-            <button><a href="category.php?category=Phone/Tablet">Celulare/Tablet</a></button>
+            <button><a href="category.php?category=SmartDevices">SmartDevices</a></button>
         </aside>
         <div class="slider-background">
             <div class="div-slideshow">

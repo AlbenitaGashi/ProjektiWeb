@@ -140,9 +140,6 @@ class ProductController{
         $query ->bindParam(':kodiProd', $kodiProd);
         $query -> execute();
         if($product instanceof Aksesori){
-            /* $query = $this -> database -> pdo ->prepare("UPDATE produkti set kategoria = 'Aksesori' where kodiProd = :kodiProd");
-            $query -> bindParam(':kodiProd', $kodiProd);
-            $query -> execute(); */
             $pershkrimi = $product -> getPershkrimi();
             $query = $this->database->pdo->prepare('UPDATE aksesori
                                                     set kodiProd = :kodiProd, 
@@ -172,15 +169,8 @@ class ProductController{
             $query -> bindParam(':cpu', $cpu);
             $query -> bindParam(':kategoria', $kategoria);
             $query -> execute();
-            /* $query = $this -> database -> pdo ->prepare("UPDATE produkti set kategoria = :kategoria where kodiProd = :kodiProd");
-            $query -> bindParam(':kategoria', $kategoria);
-            $query -> bindParam(':kodiProd', $kodiProd);
-            $query -> execute(); */
         }
         if($product instanceof SmartDevices){
-            /* $query = $this -> database -> pdo ->prepare("UPDATE  produkti set kategoria = 'SmartDevices' where kodiProd = :kodiProd");
-            $query -> bindParam(':kodiProd', $kodiProd);
-            $query -> execute(); */
             $storage = $product -> getStorage();
             $ram = $product -> getRam();
             $cpu = $product -> getCpu();
@@ -204,8 +194,9 @@ class ProductController{
         $query -> execute();
     }
     public function searchresult($search){
-        $query = $this -> database -> pdo -> prepare('SELECT * from produkti where emri like %:search%');
+        $query = $this -> database -> pdo -> prepare("SELECT * from produkti where INSTR(emri, :search)");
         $query -> bindParam(":search", $search);
-        return $query -> execute();
+        $query -> execute();
+        return $query -> fetchAll();
     }
 }

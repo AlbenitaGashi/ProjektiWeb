@@ -16,7 +16,7 @@ abstract class Produkti implements Kategoria{
         return $this -> image;
     }
     public function setImage($image){
-        $this -> image = './Images/'.$image; 
+        $this -> image = $image; 
     }
     public function getKodiProd(){
         return $this -> kodiProd;

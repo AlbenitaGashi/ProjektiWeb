@@ -2,9 +2,11 @@
     require_once "./controllers/ContactController.php";
     $contactController = new ContactController;
     $contacts = $contactController ->readData();
-    ?> 
-    <h1 style = "text-align:center;">Table Contacts</h1>
-    
+    ?>
+    <hr style ="margin:10px">
+    <h1 style = "text-align:center;">Contacts messages</h1>
+    <hr style ="margin:10px">
+
     <table class = "table">
         <thead>
             <tr>

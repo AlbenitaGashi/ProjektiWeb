@@ -2,9 +2,11 @@
     require_once "./controllers/ProductController.php";
     $prodController = new ProductController;
     $products = $prodController ->readData();
-    ?> 
-    <h1 style = "text-align:center;">Tabela Products</h1>
-    
+    ?>
+    <hr style ="margin:10px">
+    <h1 style = "text-align:center;">Products</h1>
+    <hr style ="margin:10px">
+
     <table class = "table">
         <thead>
             <tr>

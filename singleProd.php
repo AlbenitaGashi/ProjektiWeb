@@ -43,7 +43,7 @@
                 <?php }
                 if ($singleProd["discount"] == 0) { 
                     ?>
-                    <h2>Çmimi: <label><?php echo $singleProd['cmimi'] ?>€</label></h2>
+                    <h2><label><?php echo $singleProd['cmimi'] ?>€</label></h2>
                 <?php }
                 if ($singleProd['kategoria'] == "Aksesori") {
                 ?>

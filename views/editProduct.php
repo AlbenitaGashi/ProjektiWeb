@@ -15,9 +15,6 @@
     $productController = new ProductController;
     $product = $productController -> readAProduct($kodiProd);
     $kategoria = $product['kategoria'];
-    /* if(isset($_POST['submit'])){
-        $productController -> update($_POST, $kodiProd, $kategoria);
-    } */
     if(isset($_POST['submit'])){
     $checked = checkFields($_POST);
     if($checked){

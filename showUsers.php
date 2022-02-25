@@ -2,8 +2,10 @@
     require_once "./controllers/UserController.php";
     $userController = new UserController;
     $users = $userController ->readData();
-    ?> 
-    <h1 style = "text-align:center;">Table Users</h1>
+    ?>
+    <hr style ="margin:10px">
+    <h1 style = "text-align:center;">Users</h1>
+    <hr style ="margin:10px">
     
     <table class = "table">
         <thead>
