@@ -17,6 +17,14 @@
     {
         return round(($cmimi - ($cmimi * $discount / 100)), 2);
     }
+    if(isset($_GET['submit'])){
+        if(isset($_COOKIE['username'])){
+            include './shoppingCard.php';
+        }
+        else{
+            header('Location:login.php');
+        }
+    }
     ?>
 </head>
 
@@ -86,9 +94,9 @@
                 <div class="singlePButton">
                     <div class="heartButtonCart">
                         <button>Shto ne shporte</button>
-                        <img id="heartIconStyle" src="Images/Icons/heartIcon.png" alt="">
+                        <!-- <img id="heartIconStyle" src="Images/Icons/heartIcon.png" alt=""> -->
                     </div>
-                    <button class="addToCart" onclick="orderNow('${id}')">Porosit tani!</button>
+                    <button class="addToCart"><a href="shoppingCard.php?kodiProd=<?php echo $singleProd['kodiProd']?>">Porosit tani!</a></button>
                 </div>
             </div>
         </div>

@@ -27,7 +27,7 @@
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 .table thead tr {
-    background-color: #170098;
+    background-color: rgb(53, 53, 122);
     color: white;
     text-align: left;
     font-weight: bold;

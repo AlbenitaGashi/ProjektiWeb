@@ -4,7 +4,7 @@
     $contacts = $contactController ->readData();
     ?>
     <hr style ="margin:10px">
-    <h1 style = "text-align:center;">Contacts messages</h1>
+    <h1 style = "text-align:center;">Mesazhet</h1>
     <hr style ="margin:10px">
 
     <table class = "table">

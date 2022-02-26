@@ -4,7 +4,7 @@
     $products = $prodController ->readData();
     ?>
     <hr style ="margin:10px">
-    <h1 style = "text-align:center;">Products</h1>
+    <h1 style = "text-align:center;">Produktet</h1>
     <hr style ="margin:10px">
 
     <table class = "table">

@@ -4,7 +4,7 @@
     $users = $userController ->readData();
     ?>
     <hr style ="margin:10px">
-    <h1 style = "text-align:center;">Users</h1>
+    <h1 style = "text-align:center;">Perdoruesit</h1>
     <hr style ="margin:10px">
     
     <table class = "table">

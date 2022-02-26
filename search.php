@@ -10,10 +10,6 @@
             </button>
             </form>
         </div>
-        <div class="icon">
-            <img src="Images/Icons/wishList.png"  alt="">
-            <img src="Images/Icons/cart1.png"  alt="">
-        </div>
 </div>
 <?php 
 if(isset($_GET['submit'])){
