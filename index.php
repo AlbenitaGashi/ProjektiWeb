@@ -26,7 +26,7 @@
             <div class="div-slideshow">
                 <h1>News</h1>
                 <div class="slider">
-                    <a href="singleProd.php?id=11">
+                    <a href="singleProd.php?kodiProd=1000011">
                     <div class="slideContent animation">
                         <img src="Images/SliderImg/sliderImg1.jfif" class="imgSliderSize" alt="">
                     </div>

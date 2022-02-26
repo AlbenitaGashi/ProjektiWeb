@@ -168,7 +168,7 @@ a{
     background-color: #e9f4ff;
     padding:2%;
     margin: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     border-radius:20px;
     text-align: center;
     box-shadow: 5px 5px 5px;
@@ -191,16 +191,33 @@ a{
     background-color: rgb(231, 136, 136);
     color:white;
 }
-#heartIconStyle{
-    width: 40px;
-    height: 40px;
+.orderNow{
+    border: none;
+    background: cornflowerblue;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.orderNow:hover{
+    background: rgb(163, 192, 247);
+    transition: 0.5s;
     border-radius: 0;
-    box-shadow: none;
 }
-#heartIconStyle:active{
-    filter: brightness(70%);
+.orderNow:active{
+    transition: 0.1s;
+    background: rgb(48, 73, 117);
 }
-.flex-Button-Heart{
+.orderNow{
+    margin-top: 20px;
+    width: 300px !important;
+}
+
+.orderNow:active{
+    transition: 0.1s;
+    background-color: rgb(69, 84, 212);
+}
+.flex-Button{
     display: flex;
     justify-content: center;
     margin-top: 10px;
@@ -267,32 +284,6 @@ a{
     background-color: #1b5792;
     transition: 0.5s;
     border-radius: 0;
-}
-.addToCartIndex{
-    border: none;
-    background: cornflowerblue;
-    color: white;
-    padding: 10px;
-    border-radius: 20px;
-}
-
-.addToCartIndex:hover{
-    background: rgb(163, 192, 247);
-    transition: 0.5s;
-    border-radius: 0;
-}
-.addToCartIndex:active{
-    transition: 0.1s;
-    background: rgb(48, 73, 117);
-}
-.addToCart{
-    margin-top: 20px;
-    width: 300px !important;
-}
-
-.addToCart:active{
-    transition: 0.1s;
-    background-color: rgb(69, 84, 212);
 }
 #category{
     display: flex;
@@ -372,7 +363,8 @@ a{
         display: none;
     }
     .product{
-        width: 35%;
+        width: 22%;
+        margin-bottom: 10px;
     }
     .product img{
         width: 100%;
@@ -383,6 +375,15 @@ a{
     }
     .relativeSearchAside{
         display: none;
+    }
+    .imgSliderSize {
+        width: 100%;
+    }
+    #next {
+        right: 0;
+    }
+    #prev{
+        left: 0;
     }
 }
 @media (max-width: 425px) {
@@ -395,6 +396,15 @@ a{
     .product{
         width: 40%;
         margin: 8px;
+    }
+    .imgSliderSize {
+        width: 100%;
+    }
+    #next {
+        right: 0;
+    }
+    #prev{
+        left: 0;
     }
     .product img{
         width: 80%;
@@ -413,6 +423,17 @@ a{
         font-size: 20pt;
     }
     .headerProd{
-        font-size: 20pt;
+        font-size: 15pt;
+    }
+}
+@media (max-width: 1024px) {
+    .imgSliderSize {
+        width: 100%;
+    }
+    #next {
+        right: 0;
+    }
+    #prev{
+        left: 0;
     }
 }

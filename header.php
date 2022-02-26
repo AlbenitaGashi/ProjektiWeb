@@ -44,10 +44,10 @@
     <aside class="asideBurger">
         <div class = "asideBurgerChildren">
             <img src="Images/Icons/xIcon.png" id = "xIcon" onclick = "removeAside()" alt="">
-            <div class="relativeSearchAside">
-            <input class="search" type="search" placeholder="Çfarë po kërkoni?">
+                <div class="relativeSearchAside">
+                <input class="search" type="search" placeholder="Çfarë po kërkoni?">
             <img src="Images/Icons/searchIcon.png" id="searchIcon" alt="">
-        </div>
+            </div>
         <h1>Menu</h1>
         <hr>
             <ul class="burgerAsideCategory">

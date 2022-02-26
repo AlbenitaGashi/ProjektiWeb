@@ -190,29 +190,18 @@
         display: none;
     }
 }
+@media (max-width: 1024px) {
+    .nav-div button{
+        margin:5px;
+    }
+}
 
 @media (max-width: 768px) {
     .aside {
         display: none;
     }
-    .slider-background{
-        width: 100%;
-    }
     .burgerIcon{
         display: block;
-    }
-    .nav-div{
-        display: none;
-    }
-    .product{
-        width: 35%;
-    }
-    .product img{
-        width: 100%;
-        height: auto;
-    }
-    .product h3,h2{
-        font-size: 11pt;
     }
     .relativeSearchAside{
         display: none;
@@ -227,7 +216,7 @@
         display: none;
     }
     .relativeSearchAside{
-        display: none;
+        display: block;
     }
     @keyframes asideBurger {
 

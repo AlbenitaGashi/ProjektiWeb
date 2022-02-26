@@ -26,9 +26,8 @@
                 </a>
             <h3>Çmimi: <label><?php echo $product['cmimi']?>€</label></h3>
             <?php }?>
-            <div class="flex-Button-Heart">
-                <button class = "addToCartIndex">Shto ne shporte</button>
-                <img id="heartIconStyle" src="Images/Icons/heartIcon.png" alt="">
+            <div class="flex-Button">
+                <button class = "orderNow"><a href="shoppingCard.php?kodiProd=<?php echo $product['kodiProd']?>">Porosit Tani</a></button>
             </div>
             </div>
             <?php
