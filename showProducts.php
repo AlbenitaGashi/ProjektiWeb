@@ -14,6 +14,7 @@
               <th>Emri</th>
               <th>Cmimi</th>
               <th>Zbritja</th>
+              <th>Modified by</th>
               <th>Edit</th>
               <th>Delete</th>
             </tr>
@@ -31,6 +32,7 @@
                             }
                              ?></td>
                 <td><?php echo $product['discount']."%"?></td>
+                <td><?php echo $product['username']?></td>
                 <td><a href="./editProduct.php?kodiProd=<?php echo $product['kodiProd'];?>">Edit</a></td>
                 <td><a href="./deleteProduct.php?kodiProd=<?php echo $product['kodiProd'];?>">Delete</a></td>
             </tr>

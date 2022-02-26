@@ -30,19 +30,12 @@ function validateContacts() {
         count++;
     }
     if (count == 0) {
-        confirm("Mesazhi është derguar me sukses!");
-        var activeReload = document.getElementById('rel');
-        function activeRel() {
-            return true;
-        }
-        activeReload.addEventListener('submit', activeRel);
+        var reload = document.getElementById('rel');
+        reload.onsubmit = function(e){ return true; }
     }
-    else {
-        var stopReload = document.getElementById('rel');
-        function stopRel(stop) {
-            stop.preventDefault();
-        }
-        stopReload.addEventListener('submit', stopRel);
+    else if(count != 0){
+        var reload = document.getElementById('rel');
+        reload.onsubmit = function(e){ e.preventDefault()}
     }
 }
 function removeError(spanId, inputId) {

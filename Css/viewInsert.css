@@ -1,25 +1,13 @@
-
-   
-
-
 body {
     background: rgba(0, 53, 107, 0.9); 
-  
     text-align: center;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    
     color:white;
     font-size: 20px;
     position: relative;
-    
-    
-   
-
-   
 }
-
 .button {
   appearance: none;
   background-color: transparent;
@@ -36,18 +24,15 @@ body {
   transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
   width: 100px;
 }
-
 .button:disabled {
   pointer-events: none;
 }
-
 .button:hover {
   color: #fff;
   background-color: #124a9c;
   box-shadow: rgba(0, 225, 255, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
-
 .button:active {
   box-shadow: none;
   transform: translateY(0);
@@ -94,7 +79,7 @@ body {
     border-image: linear-gradient(to right, #0c16a3, #140aad);
     border-image-slice: 1;
 }
-.form__field:focus ~ .form__label {
+.form__field:hover ~ .form__label {
     position: absolute;
     top: 0;
     display: block;
@@ -103,14 +88,12 @@ body {
     color: #0b0258;
     font-weight: 700;
 }
-
 .form__field:required, .form__field:invalid {
     box-shadow: none;
 }
-
-
 .forma{
     text-align: center;
+    margin-top: 50px;
 }
 .upload-btn-wrapper {
     position: relative;
@@ -144,9 +127,3 @@ body {
 #submit {
         font-size: 50px;
 }
- 
-
-
-
-
-

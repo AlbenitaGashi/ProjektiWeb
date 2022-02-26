@@ -28,12 +28,14 @@ class ProductController{
         $cmimi = $product -> getCmimi();
         $discount = $product -> getDiscount();
         $image = $product -> getImage();
-        $query = $this->database->pdo->prepare('INSERT INTO produkti (kodiProd, image, emri, cmimi, discount) values (:kodiProd, :image, :emri, :cmimi, :discount)');
+        $username = $_COOKIE['username'];
+        $query = $this->database->pdo->prepare('INSERT INTO produkti (kodiProd, image, emri, cmimi, discount, username) values (:kodiProd, :image, :emri, :cmimi, :discount, :username)');
         $query ->bindParam(':kodiProd', $kodiProd);
         $query ->bindParam(':image', $image);
         $query ->bindParam(':emri', $emri);
         $query ->bindParam(':cmimi', $cmimi);
         $query ->bindParam(':discount', $discount);
+        $query ->bindParam(':username', $username);
         $query -> execute();
         if($product instanceof Aksesori){
             $query = $this -> database -> pdo ->prepare("UPDATE produkti set kategoria = 'Aksesori' where kodiProd = :kodiProd");
@@ -125,12 +127,14 @@ class ProductController{
         $cmimi = $product -> getCmimi();
         $discount = $product -> getDiscount();
         $image = $product -> getImage();
+        $username = $_COOKIE['username'];
         $query = $this->database->pdo->prepare('UPDATE produkti
                                                 set kodiProd = :kodiProd,
                                                 image = :image, 
                                                 emri = :emri, 
                                                 cmimi = :cmimi, 
-                                                discount = :discount
+                                                discount = :discount,
+                                                username = :username
                                                 WHERE kodiProd = :kodiProd');
         $query ->bindParam(':kodiProd', $kodiProd);
         $query ->bindParam(':image', $image);
@@ -138,6 +142,7 @@ class ProductController{
         $query ->bindParam(':cmimi', $cmimi);
         $query ->bindParam(':discount', $discount);
         $query ->bindParam(':kodiProd', $kodiProd);
+        $query ->bindParam(':username', $username);
         $query -> execute();
         if($product instanceof Aksesori){
             $pershkrimi = $product -> getPershkrimi();

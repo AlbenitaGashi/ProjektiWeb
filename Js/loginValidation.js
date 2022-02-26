@@ -20,22 +20,7 @@ function validateLogin() {
     else if(count != 0){
         var reload = document.getElementById('rel');
         reload.onsubmit = function(e){ e.preventDefault()}
-    }/* 
-    if (count == 0) {
-        //confirm("Login eshte kryer me sukses!");
-        var activeReload = document.getElementById('rel');
-        function activeRel() {
-            return true;
-        }
-        activeReload.addEventListener('submit', activeRel);
     }
-    else {
-        var stopReload = document.getElementById('rel');
-        function stopRel(stop) {
-            stop.preventDefault();
-        }
-        stopReload.addEventListener('submit', stopRel);
-    } */
 }
 function removeError(spanId, inputId) {
     document.getElementById(spanId).style.display = "none";

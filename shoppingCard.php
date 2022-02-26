@@ -27,8 +27,24 @@ function calcDiscount($cmimi, $discount)
     return $cmimi;
 }
 if(isset($_POST['submit'])){
-    $shoppingController = new ShoppingController;
-    $shoppingController -> insert($_POST, $product['kodiProd'], $cmimi);
+    $checked = checkFields($_POST);
+    if($checked){
+        echo "<script>confirm('Insertimi eshte kryer me sukses!')</script>";
+        $shoppingController = new ShoppingController;
+        $shoppingController -> insert($_POST, $product['kodiProd'], $cmimi);
+    }
+    else{
+        echo "<script>alert('Gjitha fushat duhet te plotesohen!')</script>";
+    }
+}
+function checkFields($fields){
+    foreach($fields as $field){
+        if($field == null || $field == ""){
+            echo $field;
+            return false;
+        }
+    }
+    return true;
 }
 ?>
 <div class="shoppingCardBody">

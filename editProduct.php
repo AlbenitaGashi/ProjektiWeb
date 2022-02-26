@@ -119,7 +119,7 @@
         <?php
         }
         ?>
-        <input type="submit" name="submit" value="Update" class="button">
+        <input type="submit" name="submit" value="Edit" class="button">
     </form>
 </body>
 

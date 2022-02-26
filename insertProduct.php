@@ -38,8 +38,6 @@ function checkFields($fields){
 ?>
 <body>
     <form method="POST" class="forma">
-
-   
         <p class="upmarg">Image:</p> 
         <div class="upload-btn-wrapper">
             <button class="btn">Upload a file</button>
@@ -49,7 +47,7 @@ function checkFields($fields){
 
         <div class="form__group field">
             <input type="number" class="form__field" placeholder="Name" name="kodiProd"required />
-            <label for="name" class="form__label">KodiProd:</label>
+            <label for="name" class="form__label">Kodi produktit:</label>
         </div>
         <br>
         <div class="form__group field">

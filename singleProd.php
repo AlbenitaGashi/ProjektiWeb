@@ -92,7 +92,7 @@
                 }
                 ?>
                 <div class="flex-Button">
-                    <button class = "orderNow"><a href="shoppingCard.php?kodiProd=<?php echo $product['kodiProd']?>">Porosit Tani</a></button>
+                    <button class = "orderNow"><a href="shoppingCard.php?kodiProd=<?php echo $singleProd['kodiProd']?>">Porosit Tani</a></button>
                 </div>
             </div>
         </div>
