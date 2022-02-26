@@ -31,8 +31,8 @@
                 <td><?php echo $user['email'];?></td>
                 <td><?php echo $user['username'];?></td>
                 <td><?php echo ($user['roli'] == 0) ? "User" : "Admin";?></td>
-                <td><a href="views/editUser.php?roli=<?php echo $user['roli'];?>&username=<?php echo $user['username'];?>">Edit</a></td>
-                <td><a href="views/deleteUser.php?username=<?php echo $user['username'];?>">Delete</a></td>
+                <td><a href="./editUser.php?roli=<?php echo $user['roli'];?>&username=<?php echo $user['username'];?>">Edit</a></td>
+                <td><a href="./deleteUser.php?username=<?php echo $user['username'];?>">Delete</a></td>
             </tr>
             <?php endforeach;?>
         </tbody>

@@ -6,10 +6,14 @@ require_once "./controllers/shoppingController.php";
 <head>
     <link rel="stylesheet" href="./Css/style.css">
 </head>
-<?php if (isset($_GET['kodiProd']) && isset($_COOKIE['username'])) {
+<?php 
+if(isset($_GET['kodiProd']) && isset($_COOKIE['username'])) {
     $productController = new ProductController;
     $product = $productController->readAProduct($_GET['kodiProd']);
 } 
+else{
+    header('Location:login.php');
+}
 $cmimi;
 if ($product["discount"] != 0) {
     $cmimi = calcDiscount($product['cmimi'], $product['discount']);

@@ -26,7 +26,7 @@
                 <td><?php echo $contact['mbiemri']?></td>
                 <td><?php echo $contact['email']?></td>
                 <td><?php echo $contact['message']?></td>
-                <td><a href="views/deleteContact.php?id=<?php echo $contact['id'];?>">Delete</a></td>
+                <td><a href="./deleteContact.php?id=<?php echo $contact['id'];?>">Delete</a></td>
             </tr>
             <?php endforeach;?>
         </tbody>

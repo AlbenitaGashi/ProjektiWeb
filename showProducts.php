@@ -31,8 +31,8 @@
                             }
                              ?></td>
                 <td><?php echo $product['discount']."%"?></td>
-                <td><a href="views/editProduct.php?kodiProd=<?php echo $product['kodiProd'];?>">Edit</a></td>
-                <td><a href="views/deleteProduct.php?kodiProd=<?php echo $product['kodiProd'];?>">Delete</a></td>
+                <td><a href="./editProduct.php?kodiProd=<?php echo $product['kodiProd'];?>">Edit</a></td>
+                <td><a href="./deleteProduct.php?kodiProd=<?php echo $product['kodiProd'];?>">Delete</a></td>
             </tr>
             <?php endforeach;?>
         </tbody>
