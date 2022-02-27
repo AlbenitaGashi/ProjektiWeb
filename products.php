@@ -1,5 +1,4 @@
 <?php
-//require "dbProd.php";
 require_once "./controllers/ProductController.php";
 $allProduct = new ProductController;
 $products = $allProduct->readData();

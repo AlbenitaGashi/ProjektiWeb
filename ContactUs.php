@@ -65,10 +65,7 @@
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <h4>Disclaimer</h5>
-            <h5>©2021 - AsterTech</h6>
-    </footer>
+    <?php include 'footer.php'?>
     <script src="Js/contactValidation.js"></script>
 </body>
 

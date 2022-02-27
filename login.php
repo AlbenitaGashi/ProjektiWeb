@@ -44,10 +44,7 @@
             You don't have an account? <a href="Register.html">Register now</a>
         </div>
     </div>
-    <footer class="footer">
-        <h4>Disclaimer</h5>
-            <h5>©2021 - AsterTech</h6>
-    </footer>
+    <?php include 'footer.php'?>
 </body>
 <script src="Js/loginValidation.js"></script>
 

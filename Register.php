@@ -121,10 +121,7 @@
     </div>
     </div>
     <script src="Js/registerValidation.js"></script>
-    <footer class="footer">
-        <h4>Disclaimer</h5>
-            <h5>©2021 - AsterTech</h6>
-    </footer>
+    <?php include 'footer.php'?>
 </body>
 
 </html>

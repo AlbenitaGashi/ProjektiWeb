@@ -53,12 +53,8 @@
             <div class="div-products" id="products"><?php include "products.php" ?></div>
         </div>
         <div id="discount"></div>
-        <footer class="footer">
-            <h4>Disclaimer</h5>
-                <h5>©2021 - AsterTech</h6>
-        </footer>
         <script src="Js/main.js">
         </script>
 </body>
-
+    <?php include 'footer.php'?>
 </html>
