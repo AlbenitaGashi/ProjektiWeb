@@ -20,8 +20,8 @@
     if ($products == null) {
         echo "<h1 class='categoryHeader'>Nuk eshte gjetur asnje produkt</h1>";
     } else {
-        echo "<h1 class='categoryHeader'>Rezultatet per:" . $_GET['search'] . "</h1>" . "<br>"; ?>
-        <div style="display:flex;" id="products">
+        echo "<h1 class='categoryHeader'>Rezultatet per: \"" . $_GET['search'] . "\"</h1>" . "<br>"; ?>
+        <div style="display:flex; flex-wrap:wrap;" id="products">
             <?php
             foreach ($products as $product) {
             ?>

@@ -2,6 +2,10 @@
 include "header.php";
 include "search.php";
 require_once "./controllers/ProductController.php";
+?>
+<link rel="stylesheet" href="Css/style.css">
+<script src="Js/main.js"></script>
+<?php
 $prodController = new ProductController;
 $products = $prodController->readData();
 $category = $_GET['category'];

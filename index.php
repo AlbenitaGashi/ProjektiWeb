@@ -31,9 +31,9 @@
                             <img src="Images/SliderImg/sliderImg1.jfif" class="imgSliderSize" alt="">
                         </div>
                     </a>
-                    <a href="register.php">
+                    <a href="singleProd.php?kodiProd=1000012">
                         <div class="slideContent animation">
-                            <img src="Images/SliderImg/sliderImg2.png" class="imgSliderSize" alt="">
+                            <img src="Images/SliderImg/sliderImg2.jpg" class="imgSliderSize" alt="">
                         </div>
                     </a>
                     <div class="slideContent animation">
