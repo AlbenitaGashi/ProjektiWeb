@@ -21,6 +21,7 @@ if(isset($_POST['submit'])){
     if($checked){
         echo "<script>confirm('Insertimi eshte kryer me sukses!')</script>";
         $product -> insert($_POST, $kategoria);
+        header("Location: ./dashboard.php");
     }
     else{
         echo "<script>alert('Gjitha fushat duhet te plotesohen!')</script>";
@@ -29,7 +30,6 @@ if(isset($_POST['submit'])){
 function checkFields($fields){
     foreach($fields as $field){
         if($field == null || $field == ""){
-            echo $field;
             return false;
         }
     }
@@ -41,22 +41,22 @@ function checkFields($fields){
         <p class="upmarg">Image:</p> 
         <div class="upload-btn-wrapper">
             <button class="btn">Upload a file</button>
-            <input type="file" name="myfile" />
+            <input type="file" name="image" />
         </div>
         <br>
 
         <div class="form__group field">
-            <input type="number" class="form__field" placeholder="Name" name="kodiProd"required />
+            <input type="number" class="form__field" placeholder="Name" name="kodiProd" required />
             <label for="name" class="form__label">Kodi produktit:</label>
         </div>
         <br>
         <div class="form__group field">
             <input type="text" class="form__field" placeholder="Name" name="emri"required />
-            <label for="name" class="form__label">Name:</label>
+            <label for="name" class="form__label">Emri:</label>
         </div>
         <br>
         <div class="form__group field">
-            <input type="number" class="form__field" placeholder="Name" name="cmimi"required />
+            <input type="number" step = "0.01" class="form__field" placeholder="Name" name="cmimi"required />
             <label for="name" class="form__label">Cmimi:</label>
         </div>
         <br>
@@ -117,6 +117,7 @@ function checkFields($fields){
             <?php
         }
         ?>
+        <br>
         <input type="submit" name = "submit" value = "Save" class="button">
     </form>
 </body>

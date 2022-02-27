@@ -14,7 +14,7 @@
         <li><a href="category.php?category=Aksesori">Aksesorë</a></li>
         <li><a href="category.php?category=PC">PC</a></li>
         <li><a href="category.php?category=Laptop">Laptop</a></li>
-        <li><a href="category.php?category=Phone/Tablet">Celulare/Tablet</a></li>
+        <li><a href="category.php?category=SmartDevices">SmartDevices</a></li>
     </ul>
 </head>
 <body>

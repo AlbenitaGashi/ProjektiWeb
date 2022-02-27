@@ -16,8 +16,13 @@
                 if(isset($_COOKIE['roli']) && $_COOKIE['roli'] == 1){
             ?>
             <div><button onclick="location.href ='dashboard.php'">Dashboard</button></div>
+            <?php } 
+                if(isset($_COOKIE['username'])){
+                ?>
             <div><button onclick="location.href = 'logout.php'">Logout</button></div>
-            <?php } ?> 
+                <?php
+            }
+            ?> 
         </div>
         <?php 
             if(isset($_COOKIE['username']) && isset($_COOKIE['emri'])){ ?>
@@ -51,7 +56,7 @@
         <h1>Menu</h1>
         <hr>
             <ul class="burgerAsideCategory">
-                <?php if(isset($_COOKIE['emri'])){?>
+                <?php if(isset($_COOKIE['roli']) && $_COOKIE['roli'] == 1){?>
                     <li><a href='dashboard.php'>Dashboard</a></li>
                 <?php } ?>
                 <li><a href = 'index.php'>Home</a></li>
@@ -59,7 +64,7 @@
                 <li><a href ='ContactUs.php'>Contacts</a></li>
                 <li><a href='Register.php' id="register">Register</a></li>
                 <li><a href='login.php'  id="login">Login</a></li>
-                <?php if(isset($_COOKIE['emri'])){?>
+                <?php if(isset($_COOKIE['username'])){?>
                     <li><a href='logout.php'>Logout</a></li>
                 <?php } ?>
             </ul>
@@ -69,7 +74,7 @@
                 <li onclick="removeAside()"><a href="category.php?category=Aksesori">Aksesorë</a></li>
                 <li onclick="removeAside()"><a href="category.php?category=Laptop">Laptop</a></li>
                 <li onclick="removeAside()"><a href="category.php?category=PC">PC</a></li>
-                <li onclick="removeAside()"><a href="category.php?category=Phone/Tablet">Celulare/Tablet</a></li>
+                <li onclick="removeAside()"><a href="category.php?category=SmartDevices">SmartDevices</a></li>
             </ul>
         </div>
         </aside>

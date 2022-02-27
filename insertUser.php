@@ -16,7 +16,7 @@
     if($checked){
         echo "<script>confirm('Insertimi eshte kryer me sukses!')</script>";
         $userController -> insert($_POST);
-        header("Location: ../dashboard.php");
+        header("Location: ./dashboard.php");
     }
     else{
         echo "<script>alert('Gjitha fushat duhet te plotesohen!')</script>";
@@ -65,7 +65,7 @@ function checkFields($fields){
         </div>
         <br>
         <div class="form__group field">
-            <input type="text" class="form__field" placeholder="Name" name="password" required />
+            <input type="password" class="form__field" placeholder="Name" name="password" required />
             <label for="name" class="form__label">Password:</label>
         </div>
         <br>

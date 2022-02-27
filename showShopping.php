@@ -14,6 +14,8 @@
               <th>Emri</th>
               <th>Mbiemri</th>
               <th>Kodi produktit</th>
+              <th>Qyteti</th>
+              <th>Numri Telefonit</th>
               <th>Cmimi</th>
             </tr>
         </thead>
@@ -24,6 +26,8 @@
                 <td><?php echo $shop['emri'];?></td>
                 <td><?php echo $shop['mbiemri']?></td>
                 <td><?php echo $shop['kodiProd']?></td>
+                <td><?php echo $shop['qyteti']?></td>
+                <td><?php echo $shop['numriTel']?></td>
                 <td><?php echo $shop['cmimi']?></td>
             </tr>
             <?php endforeach;?>

@@ -13,7 +13,9 @@
 </div>
 <?php 
 if(isset($_GET['submit'])){
-    $location = "Location: searchResult.php?search=".$_GET['search'];
-    header($location);
+    if(!($_GET['search'] == null || trim($_GET['search'], " ") == "")){
+        $location = "Location: searchResult.php?search=".$_GET['search'];
+        header($location);
+    }
 }
 ?>

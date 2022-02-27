@@ -161,7 +161,7 @@ a{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding-top: 5%;
+    padding-top: 4%;
     padding-bottom: 5%;
 }
 .product{
@@ -177,8 +177,7 @@ a{
     filter: brightness(95%);
 }
 .product img{
-    width: 250px;
-    height: 250px;
+    width: 270px;
     border-radius: 20px;
     box-shadow: 5px 5px 5px black;
     flex-direction: column;
@@ -296,6 +295,7 @@ a{
 #productsCategory{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .productPageCategory{
     display:flex;
