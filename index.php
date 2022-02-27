@@ -10,7 +10,7 @@
     session_start();
     include "header.php";
     include "search.php";
-    ?> 
+    ?>
 </head>
 
 <body>
@@ -27,16 +27,16 @@
                 <h1>News</h1>
                 <div class="slider">
                     <a href="singleProd.php?kodiProd=1000011">
-                    <div class="slideContent animation">
-                        <img src="Images/SliderImg/sliderImg1.jfif" class="imgSliderSize" alt="">
-                    </div>
+                        <div class="slideContent animation">
+                            <img src="Images/SliderImg/sliderImg1.jfif" class="imgSliderSize" alt="">
+                        </div>
                     </a>
                     <a href="register.php">
-                    <div class="slideContent animation">
-                        <img src="Images/SliderImg/sliderImg2.png" class="imgSliderSize" alt="">
-                    </div>
+                        <div class="slideContent animation">
+                            <img src="Images/SliderImg/sliderImg2.png" class="imgSliderSize" alt="">
+                        </div>
                     </a>
-                    <div class="slideContent animation" >
+                    <div class="slideContent animation">
                         <img src="Images/SliderImg/sliderImg3.jfif" class="imgSliderSize" alt="">
                     </div>
                     <div class="arrow">
@@ -48,17 +48,17 @@
         </div>
     </div>
     <div>
-    <div>
-        <h1 class="headerProd">Produktet e dites</h1>
-        <div class="div-products" id="products"><?php include "products.php"?></div>
-    </div>
-    <div id="discount"></div>
-    <footer class="footer">
-        <h4>Disclaimer</h5>
-            <h5>©2021 - AsterTech</h6>
-    </footer>
-    <script src="Js/main.js">
-    </script>
+        <div>
+            <h1 class="headerProd">Produktet e dites</h1>
+            <div class="div-products" id="products"><?php include "products.php" ?></div>
+        </div>
+        <div id="discount"></div>
+        <footer class="footer">
+            <h4>Disclaimer</h5>
+                <h5>©2021 - AsterTech</h6>
+        </footer>
+        <script src="Js/main.js">
+        </script>
 </body>
 
 </html>

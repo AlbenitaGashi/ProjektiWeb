@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "../Css/sharedStyle.css">
-    <link rel = "stylesheet" href = "./Css/viewInsert.css">
+    <link rel="stylesheet" href="../Css/sharedStyle.css">
+    <link rel="stylesheet" href="./Css/viewInsert.css">
     <title>Document</title>
-    <?php 
+    <?php
     require_once './controllers/UserController.php';
     include './header.php';
     $userController = new UserController;
-    if(isset($_POST['submit'])){
-    $checked = checkFields($_POST);
-    if($checked){
-        echo "<script>confirm('Insertimi eshte kryer me sukses!')</script>";
-        $userController -> insert($_POST);
-        header("Location: ./dashboard.php");
-    }
-    else{
-        echo "<script>alert('Gjitha fushat duhet te plotesohen!')</script>";
-    }
-}
-function checkFields($fields){
-    foreach($fields as $field){
-        if($field == null || $field == ""){
-            return false;
+    if (isset($_POST['submit'])) {
+        $checked = checkFields($_POST);
+        if ($checked) {
+            echo "<script>confirm('Insertimi eshte kryer me sukses!')</script>";
+            $userController->insert($_POST);
+            header("Location: ./dashboard.php");
+        } else {
+            echo "<script>alert('Gjitha fushat duhet te plotesohen!')</script>";
         }
     }
-    return true;
-}
+    function checkFields($fields)
+    {
+        foreach ($fields as $field) {
+            if ($field == null || $field == "") {
+                return false;
+            }
+        }
+        return true;
+    }
     ?>
 </head>
+
 <body>
     <form method="POST" class="forma">
         <div class="form__group field">
@@ -69,7 +71,8 @@ function checkFields($fields){
             <label for="name" class="form__label">Password:</label>
         </div>
         <br>
-        <input type="submit" name = "submit" value = "Insert" class="button">
+        <input type="submit" name="submit" value="Insert" class="button">
     </form>
 </body>
+
 </html>

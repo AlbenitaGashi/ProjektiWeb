@@ -17,11 +17,10 @@
     {
         return round(($cmimi - ($cmimi * $discount / 100)), 2);
     }
-    if(isset($_GET['submit'])){
-        if(isset($_COOKIE['username'])){
+    if (isset($_GET['submit'])) {
+        if (isset($_COOKIE['username'])) {
             include './shoppingCard.php';
-        }
-        else{
+        } else {
             header('Location:login.php');
         }
     }
@@ -49,17 +48,17 @@
                 <?php if ($singleProd["discount"] != 0) { ?>
                     <h3><label style="text-decoration :line-through"><?php echo $singleProd['cmimi'] ?>€</label><label><?php echo " " . calcDiscount($singleProd['cmimi'], $singleProd['discount']) ?>€</label></h3>
                 <?php }
-                if ($singleProd["discount"] == 0) { 
-                    ?>
+                if ($singleProd["discount"] == 0) {
+                ?>
                     <h2><label><?php echo $singleProd['cmimi'] ?>€</label></h2>
                 <?php }
                 if ($singleProd['kategoria'] == "Aksesori") {
                 ?>
                     <h2>Pershkrimi:</h2>
                     <p><?php echo $singleProd['pershkrimi'] ?></p>
-                <?php } 
-                if($singleProd['kategoria'] == "Laptop" || $singleProd['kategoria'] == "PC"){
-                    ?>
+                <?php }
+                if ($singleProd['kategoria'] == "Laptop" || $singleProd['kategoria'] == "PC") {
+                ?>
                     <h2>Sistemi Operativ:</h2>
                     <?php
                     echo $singleProd['os'];
@@ -73,11 +72,11 @@
                     echo $singleProd['ram'];
                     ?>
                     <h2>Procesori:</h2>
-                    <?php
+                <?php
                     echo $singleProd['cpu'];
                 }
-                if($singleProd['kategoria'] == "SmartDevices"){
-                    ?>
+                if ($singleProd['kategoria'] == "SmartDevices") {
+                ?>
                     <h2>Memoria:</h2>
                     <?php
                     echo $singleProd['storage'];
@@ -87,12 +86,12 @@
                     echo $singleProd['ram'];
                     ?>
                     <h2>Procesori:</h2>
-                    <?php
+                <?php
                     echo $singleProd['cpu'];
                 }
                 ?>
                 <div class="flex-Button">
-                    <button class = "orderNow"><a href="shoppingCard.php?kodiProd=<?php echo $singleProd['kodiProd']?>">Porosit Tani</a></button>
+                    <button class="orderNow"><a href="shoppingCard.php?kodiProd=<?php echo $singleProd['kodiProd'] ?>">Porosit Tani</a></button>
                 </div>
             </div>
         </div>

@@ -6,19 +6,17 @@ require_once "./controllers/shoppingController.php";
 <head>
     <link rel="stylesheet" href="./Css/style.css">
 </head>
-<?php 
-if(isset($_GET['kodiProd']) && isset($_COOKIE['username'])) {
+<?php
+if (isset($_GET['kodiProd']) && isset($_COOKIE['username'])) {
     $productController = new ProductController;
     $product = $productController->readAProduct($_GET['kodiProd']);
-} 
-else{
+} else {
     header('Location:login.php');
 }
 $cmimi;
 if ($product["discount"] != 0) {
     $cmimi = calcDiscount($product['cmimi'], $product['discount']);
-}
-else{
+} else {
     $cmimi = $product['cmimi'];
 }
 function calcDiscount($cmimi, $discount)
@@ -26,20 +24,20 @@ function calcDiscount($cmimi, $discount)
     $cmimi = round(($cmimi - ($cmimi * $discount / 100)), 2);
     return $cmimi;
 }
-if(isset($_POST['submit'])){
+if (isset($_POST['submit'])) {
     $checked = checkFields($_POST);
-    if($checked){
+    if ($checked) {
         echo "<script>confirm('Insertimi eshte kryer me sukses!')</script>";
         $shoppingController = new ShoppingController;
-        $shoppingController -> insert($_POST, $product['kodiProd'], $cmimi);
-    }
-    else{
+        $shoppingController->insert($_POST, $product['kodiProd'], $cmimi);
+    } else {
         echo "<script>alert('Gjitha fushat duhet te plotesohen!')</script>";
     }
 }
-function checkFields($fields){
-    foreach($fields as $field){
-        if($field == null || $field == ""){
+function checkFields($fields)
+{
+    foreach ($fields as $field) {
+        if ($field == null || $field == "") {
             echo $field;
             return false;
         }
@@ -49,7 +47,7 @@ function checkFields($fields){
 ?>
 <div class="shoppingCardBody">
     <h1>Shopping card</h1>
-    <form class="shoppingCard" method = "POST">
+    <form class="shoppingCard" method="POST">
         <div>
             Emri:
             <input type="text" name="emri">
@@ -80,7 +78,7 @@ function checkFields($fields){
                 <?php }
                 if ($product["discount"] == 0) {
                 ?>
-                    <label><?php echo $cmimi?>€</label>
+                    <label><?php echo $cmimi ?>€</label>
                 <?php }
                 ?>
             </div>
