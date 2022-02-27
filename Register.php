@@ -11,7 +11,8 @@
     $userController = new UserController;
     if (isset($_POST['submit'])) {
         $userController->insert($_POST);
-        header("Location:index.php");
+        echo "<script>confirm('Insertimi eshte kryer me sukses!');</script>";;
+        echo "<script>window.location = './index.php';</script>";
     }
     ?>
     <title>Register</title>

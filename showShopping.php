@@ -17,6 +17,7 @@ $shops = $shoppingController->readData();
             <th>Qyteti</th>
             <th>Numri Telefonit</th>
             <th>Cmimi</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -29,6 +30,7 @@ $shops = $shoppingController->readData();
                 <td><?php echo $shop['qyteti'] ?></td>
                 <td><?php echo $shop['numriTel'] ?></td>
                 <td><?php echo $shop['cmimi'] ?></td>
+                <td><a href="./deleteShopping.php?id=<?php echo $shop['id']; ?>">Delete</a></td>
             </tr>
         <?php endforeach; ?>
     </tbody>

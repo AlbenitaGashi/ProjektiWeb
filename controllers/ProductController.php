@@ -84,7 +84,6 @@ class ProductController
             $query->bindParam(':cpu', $cpu);
             $query->execute();
         }
-        return header('Location: dashboard.php');
     }
     public function readAProduct($kodiProd)
     {
@@ -198,7 +197,6 @@ class ProductController
             $query->bindParam(':cpu', $cpu);
             $query->execute();
         }
-        header('Location: dashboard.php');
     }
     public function delete($kodiProd)
     {

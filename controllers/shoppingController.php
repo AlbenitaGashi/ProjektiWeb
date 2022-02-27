@@ -1,5 +1,5 @@
 <?php
-require_once './config/Database.php';
+require_once 'C:\xampp\htdocs\ProjektiWeb\config\Database.php';
 class ShoppingController
 {
     public $database;
@@ -25,7 +25,11 @@ class ShoppingController
         $query->bindParam(':kodiProd', $kodiProd);
         $query->bindParam(':cmimi', $cmimi);
         $query->execute();
-        return header('Location: index.php');
+    }
+    public function delete($id){
+        $query = $this -> database -> pdo -> prepare("DELETE from shopping where id = :id");
+        $query -> bindParam(":id", $id);
+        $query -> execute();
     }
 }
 ?>

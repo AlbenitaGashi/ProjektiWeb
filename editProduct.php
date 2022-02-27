@@ -20,7 +20,8 @@
     if (isset($_POST['submit'])) {
         $checked = checkFields($_POST);
         if ($checked) {
-            echo "<script>confirm('Insertimi eshte kryer me sukses!')</script>";
+            echo "<script>confirm('Perditesimi eshte kryer me sukses!');</script>";
+            echo "<script>window.location = './dashboard.php';</script>";
             $productController->update($_POST, $kodiProd, $kategoria);
         } else {
             echo "<script>alert('Gjitha fushat duhet te plotesohen!')</script>";

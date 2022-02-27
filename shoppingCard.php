@@ -27,9 +27,10 @@ function calcDiscount($cmimi, $discount)
 if (isset($_POST['submit'])) {
     $checked = checkFields($_POST);
     if ($checked) {
-        echo "<script>confirm('Insertimi eshte kryer me sukses!')</script>";
         $shoppingController = new ShoppingController;
         $shoppingController->insert($_POST, $product['kodiProd'], $cmimi);
+        echo "<script>confirm('Blerja eshte kryer me sukses!');</script>";
+        echo "<script>window.location = './index.php';</script>";
     } else {
         echo "<script>alert('Gjitha fushat duhet te plotesohen!')</script>";
     }

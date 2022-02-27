@@ -12,6 +12,8 @@
     $contactController = new ContactController;
     if (isset($_POST['submit'])) {
         $contactController->insert($_POST);
+        echo "<script>confirm('Insertimi eshte kryer me sukses!');</script>";
+        echo "<script>window.location = './index.php';</script>";
     }
     ?>
 </head>

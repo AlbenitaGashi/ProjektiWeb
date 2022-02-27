@@ -19,9 +19,9 @@
     if (isset($_POST['submit'])) {
         $checked = checkFields($_POST);
         if ($checked) {
-            echo "<script>confirm('Insertimi eshte kryer me sukses!')</script>";
             $userController->update($_POST, $username);
-            header("Location: ./dashboard.php");
+            echo "<script>confirm('Perditesimi eshte kryer me sukses!');</script>";
+            echo "<script>window.location = './dashboard.php';</script>";
         } else {
             echo "<script>alert('Gjitha fushat duhet te plotesohen!')</script>";
         }
